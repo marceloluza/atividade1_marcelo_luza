@@ -1,0 +1,15 @@
+.atenuado {
+  font-size: .8em;
+  font-style: italic;
+  margin: 1em 0;
+}
+
+.negativo {
+  color: red;
+}
+.positivo {
+  color: green;
+}
+.positivo.destaque {
+  font-weight: bold;
+}

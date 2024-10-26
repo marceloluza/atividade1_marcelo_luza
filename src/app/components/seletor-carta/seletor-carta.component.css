@@ -1,0 +1,58 @@
+.carta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.naipes-linha,
+.numeros-linha {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.naipe-carta {
+  width: 70px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 40px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.3s;
+}
+
+.numero-carta {
+  width: 50px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 25px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.3s;
+}
+
+.naipe-carta.selecionada,
+.numero-carta.selecionada {
+  background-color: #e2e2e29d;
+}
+
+.naipe-vermelho {
+  color: red;
+}
+
+.naipe-preto {
+  color: black;
+}
+

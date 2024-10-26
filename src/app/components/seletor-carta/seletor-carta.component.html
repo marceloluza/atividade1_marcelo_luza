@@ -1,0 +1,29 @@
+<div class="carta-container">
+  <!-- Seleciona as naipes -->
+  <div class="naipes-linha">
+    <div
+      class="naipe-carta"
+      *ngFor="let naipe of naipes"
+      [class.selecionada]="selecionadaNaipe === naipe"
+      [ngClass]="{
+        'naipe-vermelho': naipe === '♥' || naipe === '♦',
+        'naipe-preto': naipe === '♠' || naipe === '♣'
+      }"
+      (click)="naipeSelecionada(naipe)"
+    >
+      {{ naipe }}
+    </div>
+  </div>
+
+  <!-- Seleciona os números -->
+  <div class="numeros-linha">
+    <div
+      class="numero-carta"
+      *ngFor="let numero of numeros"
+      [class.selecionada]="selecionadaNumero === numero"
+      (click)="numeroSelecionado(numero)"
+    >
+      {{ numero }}
+    </div>
+  </div>
+</div>

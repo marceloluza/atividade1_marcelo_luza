@@ -1,0 +1,20 @@
+<app-seletor-carta
+  (cartaSelecionada)="onCartaSelecionada($event)"
+></app-seletor-carta>
+
+<!-- Exibição da carta escolhida -->
+<div
+  class="carta-container"
+  *ngIf="cartaSelecionada"
+  [ngClass]="{
+    'carta-vermelha':
+      cartaSelecionada.naipe === '♥' || cartaSelecionada.naipe === '♦'
+  }"
+>
+  <div class="carta">
+    <div class="carta-numero">{{ cartaSelecionada.numero }}</div>
+    <div class="carta-naipe">{{ cartaSelecionada.naipe }}</div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

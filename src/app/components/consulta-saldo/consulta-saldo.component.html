@@ -1,0 +1,37 @@
+<div>
+  <h1>Consulta saldo</h1>
+  <nav>
+    @for (c of clientes; track $index) {
+      <button type="button" (click)="cliente = c">
+        {{c.nome}}
+      </button>
+    }
+  </nav>
+  @if (cliente) {
+    <header>
+      <div class="atenuado">
+        Último login: {{ cliente.ultimoLogin | date:'short' }}
+      </div>
+      <div>
+        <b>Cliente</b>: {{ cliente.nome | uppercase }}
+      </div>
+      <div>
+        <b>Saldo</b>:
+        <span [className]="cliente.saldo | classNamePorValor">
+          {{ cliente.saldo | currency }}
+        </span>
+      </div>
+      @if (cliente.creditoPreAprovado !== undefined) {
+        <div>
+          <b>Crédito pré-aprovado</b>:
+          <span
+            [className]="cliente.creditoPreAprovado | classNamePorValor: creditoPreAprovadoClasses"
+            appMensagemDeMouseOver="Deseja saber mais sobre o crédito? Visite abc.com/credito"
+          >
+            {{ cliente.creditoPreAprovado | currency }}
+          </span>
+        </div>
+      }
+    </header>
+  }
+</div>
