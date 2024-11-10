@@ -1,6 +1,6 @@
 # Atividade 1 - Marcelo Luza
 
-Atividade desenvolvida para a matéria framework front end angular.
+Primeira atividade desenvolvida para a matéria framework front end angular.
 
 ## Professor
 
